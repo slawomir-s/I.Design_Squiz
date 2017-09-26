@@ -1,0 +1,29 @@
+{
+  "name": "design_squiz",
+  "version": "1.0.0",
+  "description": "projekt",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slawomir-s/I.Design_Squiz.git"
+  },
+  "keywords": [
+    "grunt"
+  ],
+  "author": "Slawomir S.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slawomir-s/I.Design_Squiz/issues"
+  },
+  "homepage": "https://github.com/slawomir-s/I.Design_Squiz#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
+  }
+}

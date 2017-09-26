@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro')
+
+* 
+    box-sizing: border-box
+
+body 
+    margin: 0
+    font-family: 'Source Sans Pro', sans-serif
+
+.container 
+    max-width: 980px
+    margin: 0 auto
+    width: 100%
+
+.row:before,
+.row:after 
+    content: ""
+    display: table
+    clear: both
+
+[class*="col-"] 
+    float: left
+
+@for $i from 1 through 12
+	.col-#{$i}
+		width: ($i / 12) * 100%
+
+/*search*/
+
+header 
+    .search 
+        .container 
+            background: #F4F4F4
+            box-shadow: 0px 3px 1px 0px rgba(224,224,224,1)
+    .searchbox 
+        position: relative
+        min-width: 50px
+        width: 0%
+        height: 40px
+        float: right
+        overflow: hidden  
+        -webkit-transition: width 0.4s
+        -moz-transition: width 0.4s
+        -ms-transition: width 0.4s
+        -o-transition: width 0.4s
+        transition: width 0.4s
+        background: #a80c1e
+        .searchbox-input 
+            top: 0
+            right: 0
+            border: 0
+            outline: 0
+            background: #910414
+            height: 30px
+            margin: 4px 5px 6px 10px
+            border: none
+            padding: 5px 3px 6px 15px
+            font-size: 15px
+            font-weight: bold
+            border-radius: 5px
+            color: #fff
+            box-shadow: 1px -1px 1px 0 #fff inset
+    .searchbox-icon,
+    .searchbox-submit 
+        width: 55px
+        height: 40px
+        display: block
+        position: absolute
+        top: 0
+        font-size: 22px
+        right: 0
+        padding: 0
+        margin: 0
+        border: 0
+        outline: 0
+        line-height: 40px
+        text-align: center
+        cursor: pointer
+        color: #fff
+        background: #a80c1e
+    .searchbox-open 
+        width: 260px
+    img 
+        top: 14px
+        margin-left: 28px
+        position: absolute    
+    nav    
+        .container
+            background: #e8e8e8
+            height: 100%
+        ul 
+            float: right
+            list-style-type: none
+            margin-top: 25px
+            text-align: center
+            padding: 0px
+            li 
+                display: inline-block
+            a 
+                font-size: 16px
+                padding: 17px 28px
+                text-decoration: none
+                color: #656a77
+                display: block
+                &:hover, 
+                &:active 
+                    background-color: #fff
+                    color: #000000
+                    text-decoration: none
+                    width: 100%
+            span 
+                padding: 17px 16px
+                width: 50px
+                color: #656a77
+                cursor: pointer
+                display: inline-block
+            .shop    
+                &:hover, 
+                &:active 
+                    background-color: #fff
+                    color: #000000
+
+.form 
+    .container
+        padding: 0 140px
+        height: 100%
+    h1 
+        font-size: 32px
+        font-weight: lighter
+        color: #a80c1e
+        padding-top: 40px
+        padding-bottom: 8px
+    .donate 
+        output 
+            font-size: 18px
+        .range 
+            display: inline-block
+            position: relative
+            height: 40px
+            margin-top: 45px
+            background-color: #f9f9f9
+            -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1)
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1)
+            cursor: pointer
+            border-radius: 20px
+            width: 100%
+            input[type=range] 
+                outline: none
+                width: 100%
+                height: 39px
+                background-color: #feebc5
+                background: -moz-linear-gradient(90deg, #AE0D15 0%, #AE0D15 49%, #F82B39 50%, #F82B39 100%);
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #F82B39), color-stop(50%, #F82B39), color-stop(51%, #AE0D15), color-stop(100%, #AE0D15));
+                background: -webkit-linear-gradient(90deg, #AE0D15 0%, #AE0D15 49%, #F82B39 50%, #F82B39 100%);
+                background: -o-linear-gradient(90deg, #AE0D15 0%, #AE0D15 49%, #F82B39 50%, #F82B39 100%);
+                background: -ms-linear-gradient(90deg, #AE0D15 0%, #AE0D15 49%, #F82B39 50%, #F82B39 100%);
+                background: linear-gradient(0deg, #AE0D15 0%, #AE0D15 49%, #F82B39 50%, #F82B39 100%);
+                background-size: 50% 100%
+                background-repeat: no-repeat
+                border-radius: 20px
+                cursor: pointer
+                -webkit-appearance: none
+                &::-webkit-slider-runnable-track
+                    box-shadow: none
+                    border: none
+                    background: transparent
+                    -webkit-appearance: none
+                &::-moz-range-track 
+                    box-shadow: none
+                    border: none
+                    background: transparent
+                &::-moz-focus-outer 
+                    border: 0
+                &::-webkit-slider-thumb 
+                    width: 45px
+                    height: 40px
+                    background: #eeeeee
+                    border-radius: 30%
+                    box-shadow: 0 0 1px 0px rgba(0,0,0,0.1)
+                    -webkit-appearance: none
+                &::-moz-range-thumb 
+                    width: 45px
+                    height: 70px
+                    background: #eeeeee
+                    border-radius: 30%
+                    box-shadow: 0 0 1px 0px rgba(0,0,0,0.1)
+                    -webkit-appearance: none
+        .checkbox
+            padding-bottom: 30px
+            padding-left: 2px
+            padding-top: 30px
+            font-size: 18px
+            span 
+                padding-left: 13px
+                display: inline-block
+                font-weight: lighter
+    .second,
+    .third  
+        border-top: 1px solid rgba(204,204,204,0.5)
+        display: none
+        width: 100%
+        .block
+            width: 30px
+            height: 30px
+            border: 1px solid
+            padding: 5px
+            text-align: center
+            display: inline-block
+            margin-top: 15px
+            font-size: 18px
+        input[type=text] 
+            width: 100%
+            padding: 12px  
+            border: 1px solid #ccc
+            border-radius: 8px
+            margin-top: 10px
+            font-family: 'Source Sans Pro', sans-serif
+            &.border-red 
+                border-color: red    
+    .edge 
+        padding: 20px 10px 20px 0px
+    .notice 
+        font-size: 14px
+        padding-top: 5px
+        color: #ae0d15
+    #address-error,
+    #email-error,
+    #city-error
+        opacity: 0        
+    .text-red 
+        color: #a80c1e
+    .check 
+        padding-bottom: 55px
+        padding-top: 20px
+        .myButton 
+            -moz-box-shadow: 0px 3px 0px 0px #8a2a21
+            -webkit-box-shadow: 0px 3px 0px 0px #8a2a21
+            box-shadow: 0px 3px 0px 0px #8a2a21
+            background-color: #ae0d15
+            -moz-border-radius: 8px
+            -webkit-border-radius: 8px
+            border-radius: 8px
+            border: none
+            display:inline-block
+            cursor:pointer
+            color: #fff
+            font-size: 18px
+            font-weight: bold
+            padding: 18px 26px
+            text-decoration: none
+            text-transform: uppercase
+            &:active 
+                position: relative
+                top: 1px
+
+footer 
+    .container 
+        background: #4c4d4f
+        height: 250px
+    .row 
+        background: linear-gradient(to top, #fff 0%, #EDEDED 100%)
+        -webkit-box-shadow: inset 0px 4px 2px 0px rgba(204,204,204,1)
+        -moz-box-shadow: inset 0px 4px 2px 0px rgba(204,204,204,1)
+        box-shadow: inset 0px 4px 2px 0px rgba(204,204,204,1)
+    .social
+        float: right
+        padding-right: 46px
+        padding-top: 20px
+        text-align: center
+        position: relative
+        height: 100%
+        padding-bottom: 37px
+    .fa 
+        padding: 5px
+        font-size: 18px
+        width: 30px
+        text-align: center
+        text-decoration: none
+        margin: 2px 8px
+        border-radius: 50%
+        display: inline-block
+        position: relative
+        background: #a80c1e
+        color: white
+        &:hover 
+            opacity: 0.7
+
+@media (min-width: 768px) and (max-width: 991px)
+  
+    @for $i from 1 through 12
+        .col-m-#{$i}
+            width: ($i / 12) * 100%
+
+@media (max-width: 767px)
+  
+    @for $i from 1 through 12
+        .col-s-#{$i}
+            width: ($i / 12) * 100%
+
+    header 
+        nav 
+            img 
+                display: none
+            ul
+                margin: 0 auto
+                float: none
+                li
+                    text-align: center
+                    display: block
+                span
+                    padding: 17px 16px
+                    float: none
+
+    .form 
+        .container 
+            padding: 0 50px
+        h1
+            font-size: 25px
+            padding-top: 30px
+            padding-bottom: 5px
+        .donate 
+            output
+                font-size: 15px
+            .range 
+                height: 25px
+                margin-top: 25px
+                input[type=range]
+                    height: 24px
+                    &::-moz-focus-outer 
+                        border: 0
+                    &::-webkit-slider-thumb 
+                        width: 45px
+                        height: 30px
+                    &::-moz-range-thumb
+                        width: 45px
+                        height: 30px
+            .checkbox 
+                padding-bottom: 10px
+                padding-top: 10px
+                font-size: 13px
+        .edge
+            padding: 10px 10px 10px 0px  
+        .notice
+            font-size: 12px
+            padding-top: 5px
+            color: #ae0d15
+        .check 
+            float: none
+            text-align: center
+            padding-bottom: 35px
+            padding-top: 10px;
+            .myButton
+                font-size: 10px
+                padding: 18px 26px
+
+    footer 
+        .container
+            background: #4c4d4f  
+            height: 175px
+        .social 
+            float: none
+            padding-right: 0px
+            padding-bottom: 20px
